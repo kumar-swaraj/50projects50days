@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelector(".container").addEventListener("click",(function(e){const t=e.target.closest(".panel");t&&(this.querySelector(".panel.active").classList.remove("active"),t.classList.add("active"))}))}();

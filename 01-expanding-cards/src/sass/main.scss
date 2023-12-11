@@ -7,7 +7,8 @@
 }
 
 :root {
-  --primary-font: 'Roboto', sans-serif;
+  --primary-font: 'Mulish', sans-serif;
+  --text-grey-color: #dadfe1;
 }
 
 html {
@@ -17,4 +18,63 @@ html {
 body {
   font-family: var(--primary-font);
   box-sizing: border-box;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: var(--text-grey-color);
+  cursor: pointer;
+  flex: 0.5;
+  position: relative;
+
+  transition: flex 0.7s ease-in;
+
+  & h3 {
+    font-size: 2.4rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    opacity: 0;
+    visibility: hidden;
+
+    backdrop-filter: blur(2px) opacity(0.6);
+
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+
+  &.active {
+    flex: 5;
+
+    & h3 {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    width: 100vh;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
