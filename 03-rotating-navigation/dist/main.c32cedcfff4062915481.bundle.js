@@ -1,0 +1,1 @@
+!function(){"use strict";const e=document.getElementById("open"),n=document.getElementById("close"),t=document.querySelector(".container");e.addEventListener("click",(function(){t.classList.add("show-nav")})),n.addEventListener("click",(function(){t.classList.remove("show-nav")}))}();
