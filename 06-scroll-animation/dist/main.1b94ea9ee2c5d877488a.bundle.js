@@ -1,0 +1,1 @@
+!function(){"use strict";const t=document.querySelectorAll(".box"),n=function(){const n=.8*window.innerHeight;t.forEach((t=>{t.getBoundingClientRect().top<n?t.classList.add("show"):t.classList.remove("show")}))};n(),window.addEventListener("scroll",n)}();
