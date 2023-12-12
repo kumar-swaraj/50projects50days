@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+
+  background-color: rgb(161, 100, 223);
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.btn {
+  background-color: rebeccapurple;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  margin: 1.6rem;
+  padding: 2.4rem 4.8rem;
+  font-size: 1.92rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  // this problem occurs in mac
+  &:focus {
+    outline: none;
+  }
+}
