@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelectorAll(".form-control label").forEach((t=>{t.innerHTML=t.textContent.split("").map(((t,n)=>`<span style="transition-delay: ${50*n}ms">${t}</span>`)).join("")}))}();
