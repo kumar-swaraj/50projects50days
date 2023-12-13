@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-font: 'Mulish', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+
+  height: 100vh;
+  background-color: #2b88f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  color: #fefefe;
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+.container {
+  width: 50rem;
+}
+
+textarea {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 10rem;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  background-color: #f0932b;
+  color: #fefefe;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  margin: 0 0.5rem 1rem 0;
+  font-size: 1.4rem;
+  display: inline-block;
+
+  &.highlight {
+    background-color: #273c75;
+  }
+}
