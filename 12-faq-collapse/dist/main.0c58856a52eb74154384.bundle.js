@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelector(".faq-container").addEventListener("click",(function(t){const e=t.target.closest(".faq__toggle");e&&e.closest(".faq").classList.toggle("active")}))}();
