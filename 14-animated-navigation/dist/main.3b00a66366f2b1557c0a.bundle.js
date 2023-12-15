@@ -1,0 +1,1 @@
+!function(){"use strict";document.getElementById("nav-toggle").addEventListener("click",(function(t){t.target.closest(".navigation").classList.toggle("active")}))}();

@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-font: 'Mulish', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  background-color: #fff;
+  padding: 2rem;
+  width: 80px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(black, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: width 0.6s linear;
+
+  &.active {
+    width: 340px;
+  }
+
+  ul {
+    list-style: none;
+
+    display: flex;
+    gap: 2rem;
+
+    width: 0;
+    transition: width 0.6s linear;
+
+    li {
+      transform: rotateY(0deg);
+      opacity: 0;
+      transition: all 0.6s linear;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  &.active ul {
+    width: 100%;
+
+    li {
+      opacity: 1;
+      transform: rotateY(360deg);
+    }
+  }
+
+  .icon {
+    background-color: #fff;
+
+    border: none;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    /* without position property addEventListener is not work */
+    position: relative;
+
+    & .line {
+      background-color: #5290f9;
+      height: 2px;
+      width: 2rem;
+      border-radius: 1px;
+
+      transform-origin: top right;
+
+      transition: transform 0.6s linear;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.active .icon {
+    & .line {
+      &--1 {
+        transform: rotate(-765deg) translateX(-1px);
+      }
+
+      &--2 {
+        transform: rotate(765deg) translate(3px, 2px);
+      }
+    }
+  }
+}
