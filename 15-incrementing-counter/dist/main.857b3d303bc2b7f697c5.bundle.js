@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelectorAll(".counter").forEach((t=>{const e=+t.dataset.target;let n=0;const c=setInterval((()=>{n>=e&&clearInterval(c),t.textContent=n,n+=e/200}),1)}))}();
