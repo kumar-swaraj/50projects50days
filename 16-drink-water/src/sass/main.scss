@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-font: 'Montserrat', sans-serif;
+
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+
+  background-color: #3494e4;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 1rem 0 0;
+}
+
+.cup {
+  background-color: #fff;
+  border: 0.4rem solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 4rem 4rem;
+  height: 33rem;
+  width: 15rem;
+  margin: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  &.cup--sm {
+    height: 9.5rem;
+    width: 5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    background-color: rgba(white, 0.9);
+    cursor: pointer;
+
+    font-size: 1.2rem;
+    text-align: center;
+
+    justify-content: center;
+
+    margin: 0;
+
+    transition: all 0.3s ease;
+
+    &.full {
+      background-color: var(--fill-color);
+      color: #fff;
+    }
+  }
+}
+
+.cups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+
+  transition: all 0.3s ease;
+
+  span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  small {
+    font-size: 1.2rem;
+  }
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  font-size: 3rem;
+  font-weight: bold;
+  height: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 1rem;
+}
