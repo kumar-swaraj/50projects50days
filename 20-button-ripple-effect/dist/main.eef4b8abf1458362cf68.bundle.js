@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelector("button.ripple").addEventListener("click",(function(e){const t=e.clientX,c=e.clientY,n=e.target.offsetTop,s=t-e.target.offsetLeft,o=c-n,i=document.createElement("span");i.classList.add("circle"),i.style.top=o+"px",i.style.left=s+"px",this.append(i),setTimeout((()=>i.remove()),2e3)}))}();

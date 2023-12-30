@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary-font: 'Mulish', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+
+  height: 100vh;
+  background-color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: palevioletred;
+  color: #eee;
+  font-family: inherit;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border: 1px solid palevioletred;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2rem 3rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+
+  & .circle {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 1s ease-out;
+
+    background-image: radial-gradient(
+      circle at center,
+      darken(palevioletred, 16%) 0%,
+      darken(palevioletred, 8%) 10%,
+      darken(palevioletred, 4%) 15%,
+      lighten(palevioletred, 2%) 25%,
+      lighten(palevioletred, 4%) 35%,
+      lighten(palevioletred, 8%) 45%,
+      lighten(palevioletred, 12%) 55%,
+      lighten(palevioletred, 16%) 70%,
+      lighten(palevioletred, 20%) 80%,
+      lighten(palevioletred, 24%) 95%
+    );
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+  }
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
